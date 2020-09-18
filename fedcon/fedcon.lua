@@ -80,7 +80,7 @@ local tlsparams = {
 
 
 -- register new instance in my cluster
-function registerInstance  (dcid, clip, clpo)
+function register (dcid, clip, clpo)
   assert(dcid, "Data Center ID must be given as first parameter!")
   assert(clip, "Remote IP-Address of instance must be given as second parameter!")
   assert(clpo, "Remote Port of instance must be given as third parameter!")
@@ -584,7 +584,7 @@ function init(config)
   
   return {
   -- General
-  registerInstance = registerInstance,
+  register = register,
   unregisterInstance = unregisterInstance,
   -- Domains
   getDomains = getDomainIDs,
